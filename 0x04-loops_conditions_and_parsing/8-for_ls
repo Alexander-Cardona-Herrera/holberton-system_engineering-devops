@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+# This script is displaying ls commands
+for filename in * 
+do 
+    (printf '%s\n' "$filename" | sed 's/[0-9][-]//g')
+done
