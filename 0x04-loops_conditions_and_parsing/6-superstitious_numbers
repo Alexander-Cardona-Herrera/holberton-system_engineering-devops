@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # This script is displaying the number from 1 to 20
 x=1
-while [ $x -eq 21 ]
+while [ $x -le 20 ]
 do
     echo $x
     case $x in
@@ -9,5 +9,5 @@ do
         9) echo "bad luck from Japan";;
         17) echo "bad luck from Italy";;
     esac
-    ((x++))
+    x=$((x+1))
 done
