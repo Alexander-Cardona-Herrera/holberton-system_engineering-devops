@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # This script is displaying the number from 1 to 20
 x=1
-until [ $x -eq 21 ]
+while [ $x -eq 21 ]
 do
     echo $x
     case $x in
