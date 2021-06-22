@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 # This script is displaying the lines with "bash" word in it
 
-echo $BASHPID | pgrep 'bash'
+echo $BASHPID | pgrep -l 'bash'
