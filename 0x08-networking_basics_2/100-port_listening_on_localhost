@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+#listening localhost
+nc -l localhost 98
