@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+# comment this
+service apache2 restart
