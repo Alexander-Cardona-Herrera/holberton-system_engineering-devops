@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+# configuring web 02
+
+sudo apt-get -y update
+sudo apt-get -y upgrade
+sudo apt-get -y install haproxy
+sudo sed -i "8i ENABLED=1" /etc/default/haproxy
+sudo chmod 755 /etc/default/haproxy
+sudo sed -i "36i frontend http_front \n\t bind *:80 \n\t mode http \n\t default_backend http_back\n" /etc/haproxy/haproxy.cfg
+sudo sed -i "\n backend http_back \n\t balance roundrobin \n\t server 2695-web-01 34.75.134.83:80 check \n\t server 2695-web-02 3.85.205.247:80 check" /etc/haproxy/haproxy.cfg
+sudo service haproxy restart
