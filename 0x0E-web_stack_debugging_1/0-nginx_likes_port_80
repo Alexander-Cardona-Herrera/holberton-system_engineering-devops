@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # script that configure your Nginx server so that /redirect_me is redirecting to another page
 
-sudo sed -i 's/listen [::]:80 default_server ipv6only=on;/listen [::]:80 default_server;/g' /etc/nginx/sites-available/default
-sudo sed -i 's/listen 8080 default_server;/listen 80 default_server;/g' /etc/nginx/sites-enabled/default
-sudo sed -i 's/listen [::]:8080 default_server ipv6only=on;/listen [::]:80 default_server;/g' /etc/nginx/sites-enabled/default
+sudo sed -i 's/ipv6only=on//g' /etc/nginx/sites-available/default
+sudo sed -i 's/8080/80/g' /etc/nginx/sites-enabled/default
+sudo sed -i 's/ipv6only=on//g' /etc/nginx/sites-enabled/default
 sudo service nginx restart
