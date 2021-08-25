@@ -2,4 +2,4 @@
 # script that configure your Nginx server so can listen to port 80
 sudo sed -i 's/ipv6only=on//g' /etc/nginx/sites-available/default /etc/nginx/sites-enabled/default
 sudo sed -i 's/8080/80/g' /etc/nginx/sites-enabled/default
-sudo systemctl stop nginx 
+sudo service nginx stop
