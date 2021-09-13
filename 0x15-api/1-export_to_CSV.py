@@ -24,7 +24,7 @@ if __name__ == "__main__":
         all_tasks.append([str(user_id), str(first_name),
                          str(tasks.get('completed')), str(tasks.get('title'))])
 
-    with open('{}.csv'.format(sys.argv[1]), 'w', newline='') as f:
+    with open('{}.csv'.format(sys.argv[1]), 'w', encoding='utf-8') as f:
         writer = csv.writer(f)
 
         writer.writerows(all_tasks)
