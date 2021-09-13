@@ -25,6 +25,6 @@ if __name__ == "__main__":
                          str(tasks.get('completed')), str(tasks.get('title'))])
 
     with open('{}.csv'.format(sys.argv[1]), 'w', encoding='utf-8') as f:
-        writer = csv.writer(f)
+        writer = csv.writer(f, quoting=csv.QUOTE_ALL)
 
         writer.writerows(all_tasks)
