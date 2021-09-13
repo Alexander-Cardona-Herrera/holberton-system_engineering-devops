@@ -23,4 +23,4 @@ if __name__ == "__main__":
     user_dict = {"{}".format(sys.argv[1]): all_tasks}
     print(user_dict)
     with open('{}.json'.format(sys.argv[1]), 'w') as f:
-        json.dumps(user_dict, f)
+        json.dump(user_dict, f)
