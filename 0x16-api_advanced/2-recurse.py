@@ -28,4 +28,4 @@ def recurse(subreddit, hot_list=[], after=""):
         after = res.get("data").get("after")
         if after is None:
             return hot_list
-        recurse(subreddit, hot_list, after)
+        return recurse(subreddit, hot_list, after)
